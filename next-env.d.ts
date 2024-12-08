@@ -3,8 +3,3 @@
 
 // NOTE: This file should not be edited
 // see https://nextjs.org/docs/app/building-your-application/configuring/typescript for more information.
-interface UserWallet {
-    account: string
-    balance: "0"
-    chainId: number
-}
