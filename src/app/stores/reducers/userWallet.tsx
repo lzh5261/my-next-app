@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 const initialState: UserWallet = {
     account: "",
     balance: "0",
-    chainId: 56
+    chainId: 97
 }
 
 const walletSlice = createSlice({
