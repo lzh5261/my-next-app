@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from "../stores";
 
 const ConnectWallet: React.FC = () => {
-    const { connectWallet, provider } = useWallet()
+    const { connectWallet, signer } = useWallet()
     const userWallet = useSelector((state: RootState) => state.userWallet)
 
     const showAddress = (address: string) => {
@@ -14,10 +14,11 @@ const ConnectWallet: React.FC = () => {
     }
 
     const handleConnectWallet = useCallback(async () => {
-        if (!provider) {
+        console.log(signer);
+        if (!signer) {
             await connectWallet()
         }
-    }, [connectWallet, provider])
+    }, [connectWallet, signer])
 
     return (
         <div>
